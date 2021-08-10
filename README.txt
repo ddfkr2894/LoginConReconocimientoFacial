@@ -12,7 +12,7 @@ because the version CUDA 11.0.3 didn't work for me.
 
 
 Here is a list of the versions and libraries I used to develop the project:() must of the libraries were installed once I 
-installed Tensor Flow and Nvidia so I suggest you to install those ones first.
+installed Tensor Flow and Nvidia so I suggest to install those ones first.
 ----------------------------------
 C:\Users\Abraham Cruz>python -V
 Python 3.9.6
