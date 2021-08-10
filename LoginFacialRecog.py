@@ -1,24 +1,23 @@
-from tkinter import *
-import os
-import cv2
-from matplotlib import pyplot
-from mtcnn.mtcnn import MTCNN
-# from mtcnn import MTCNN
-import numpy as np
+from tkinter import *   # Para realizar la interfaz grafica
+import os               # Manejo de archivos
+import cv2              # Manejo y aprovechamiento de imagenes
+from matplotlib import pyplot   
+from mtcnn.mtcnn import MTCNN   # Detector de rostro o red neuronal combo lusional
+import numpy as np      # Operaciones con matrices
 
 # Lo primero que hacemos es crear una función para la pantalla principal
 def pantalla_principal():
     global pantalla     #Globalizamos la variable para usarla en otras funciones
     pantalla = Tk()
-    pantalla.geometry("300x250")    # Asignamos el tamaño de la ventana
-    pantalla.title("Chinga tu madre wey!")  #Nombre de la ventana
+    pantalla.geometry("400x300")    # Asignamos el tamaño de la ventana
+    pantalla.title("Log-In With Facial Recognition Algorithm")  #Nombre de la ventana
     #Caracteristicas de la ventana
     Label(text="Login con Reconocimiento Facial", bg="gray", width="300", height="2", font=("Verdana", 13)).pack()
     # Creamos los botones
     Label(text = "").pack() # Esto es el espacio entre el titulo y el primer boton
     Button(text = "Iniciar Sesión", height = "2", width = "30", command = login).pack()
     Label(text = "").pack() # Esto es el espacio entre el primer boton y el segundo boton
-    Button(text = "Registro", height = "2", width = "30", command = registro).pack()
+    Button(text = "Registrar Nuevo Usuario", height = "2", width = "30", command = registro).pack()
     pantalla.mainloop()
 
 # Funcion paraa asignar al boton registro
@@ -37,9 +36,9 @@ def registro():
     usuario = StringVar()
     contra = StringVar()
 
-    Label(pantalla1, text = "Registro facial: debe de asignar un usuario:").pack()
+    Label(pantalla1, text = "Registro facial: debe asignar usuario:").pack()
     # Label(pantalla1, text="").pack()    # Para dejar espacio
-    Label(pantalla1, text = "Registro normal: debe de asignar un usuario y una contraseña:").pack()
+    Label(pantalla1, text = "Registro normal: debe asignar usuario y contraseña:").pack()
     Label(pantalla1, text="").pack()    # Para dejar espacio
     Label(pantalla1, text="Usuario *").pack()   #Mostramos en la pantalla 1 el usuario
     usuario_entrada = Entry(pantalla1, textvariable=usuario)    #Creamos un text variable para que el usuario ingrese la info
