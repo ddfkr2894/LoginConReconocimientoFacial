@@ -2,7 +2,7 @@ from tkinter import *   # Para realizar la interfaz grafica
 import os               # Manejo de archivos
 import cv2              # Manejo y aprovechamiento de imagenes
 from matplotlib import pyplot   
-from mtcnn.mtcnn import MTCNN   # Detector de rostro o red neuronal combo lusional
+from mtcnn.mtcnn import MTCNN   # Detector de rostro o red neuronal convolusional
 import numpy as np      # Operaciones con matrices
 
 # Lo primero que hacemos es crear una función para la pantalla principal
